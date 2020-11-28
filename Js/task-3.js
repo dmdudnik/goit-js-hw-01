@@ -3,13 +3,19 @@ let inputPass;
 let message;
 
 inputPass = prompt('Введите пароль:');
+switch (inputPass) {
+  case ADMIN_PASSWORD: {
+    message = 'Добро пожаловать!';
+    break;
+  }
 
-if (inputPass === null) {
-  message = 'Отменено пользователем!';
-} else if (inputPass === ADMIN_PASSWORD) {
-  message = 'Добро пожаловать!';
-} else {
-  message = 'Доступ запрещен, неверный пароль!';
+  case null: {
+    message = 'Отменено пользователем!';
+    break;
+  }
+
+  default: {
+    message = 'Доступ запрещен, неверный пароль!';
+  }
 }
-
 alert(message);
