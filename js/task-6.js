@@ -9,9 +9,9 @@ while (true) {
   }
 
   input = Number(input);
-  const NOT_A_NUMBER = Number.isNaN(input);
+  let notNumber = Number.isNaN(input);
 
-  if (NOT_A_NUMBER) {
+  if (notNumber) {
     alert('Было введено не число, попробуйте еще раз');
     continue;
   }
