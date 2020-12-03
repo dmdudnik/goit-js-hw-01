@@ -12,6 +12,9 @@ let countryLow = country.toLowerCase();
 countryName = countryLow[0].toUpperCase() + countryLow.slice(1);
 
 switch (country) {
+  case null:{
+  break;
+  }
   case 'китай': {
     message = `Доставка в ${countryName} будет стоить ${CHINA_DELIVERY_COUNT} кредитов`;
     break;
