@@ -14,6 +14,9 @@ if (country !== null) {
 }
 
 switch (country) {
+  case null: {
+  break;
+  }
   case 'китай': {
     message = `Доставка в ${countryName} будет стоить ${CHINA_DELIVERY_COUNT} кредитов`;
     break;
