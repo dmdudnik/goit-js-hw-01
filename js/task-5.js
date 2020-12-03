@@ -7,39 +7,39 @@ const INDIA_DELIVERY_COUNT = 80;
 const JAMAICA_DELIVERY_COUNT = 120;
 let message;
 
-country = prompt('Введите страну доставки');
+country = prompt('Введите страну доставки', '');
 if (country !== null) {
   country = country.toLowerCase();
   countryName = country[0].toUpperCase() + country.slice(1);
-}
 
-switch (country) {
-  case null: {
-  break;
+  switch (country) {
+    case null: {
+      break;
+    }
+    case 'китай': {
+      message = `Доставка в ${countryName} будет стоить ${CHINA_DELIVERY_COUNT} кредитов`;
+      break;
+    }
+    case 'чили': {
+      message = `Доставка в ${countryName} будет стоить ${CHILE_DELIVERY_COUNT} кредитов`;
+      break;
+    }
+    case 'австралия': {
+      message = `Доставка в ${countryName} будет стоить ${AUSTRALIA_DELIVERY_COUNT} кредитов`;
+      break;
+    }
+    case 'индия': {
+      message = `Доставка в ${countryName} будет стоить ${INDIA_DELIVERY_COUNT} кредитов`;
+      break;
+    }
+    case 'ямайка': {
+      message = `Доставка в ${countryName} будет стоить ${JAMAICA_DELIVERY_COUNT} кредитов`;
+      break;
+    }
+    default: {
+      message = 'В вашей стране доставка не доступна';
+    }
   }
-  case 'китай': {
-    message = `Доставка в ${countryName} будет стоить ${CHINA_DELIVERY_COUNT} кредитов`;
-    break;
-  }
-  case 'чили': {
-    message = `Доставка в ${countryName} будет стоить ${CHILE_DELIVERY_COUNT} кредитов`;
-    break;
-  }
-  case 'австралия': {
-    message = `Доставка в ${countryName} будет стоить ${AUSTRALIA_DELIVERY_COUNT} кредитов`;
-    break;
-  }
-  case 'индия': {
-    message = `Доставка в ${countryName} будет стоить ${INDIA_DELIVERY_COUNT} кредитов`;
-    break;
-  }
-  case 'ямайка': {
-    message = `Доставка в ${countryName} будет стоить ${JAMAICA_DELIVERY_COUNT} кредитов`;
-    break;
-  }
-  default: {
-    message = 'В вашей стране доставка не доступна';
-  }
-}
 
-alert(message);
+  alert(message);
+}
