@@ -8,8 +8,10 @@ const JAMAICA_DELIVERY_COUNT = 120;
 let message;
 
 country = prompt('Введите страну доставки');
-country = country.toLowerCase();
-countryName = country[0].toUpperCase() + country.slice(1);
+if (country !== null) {
+  country = country.toLowerCase();
+  countryName = country[0].toUpperCase() + country.slice(1);
+}
 
 switch (country) {
   case 'китай': {
